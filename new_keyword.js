@@ -51,3 +51,21 @@ function Motorcycle(make,model,year){
     Car.apply(this, arguments);// arguments javascript key word // calling (make,model,year)
     this.numWheels = 2;
 }
+
+
+// this is the constructor function
+function Person(name){
+    this.name = name;
+}
+
+//this is an object created fromt the Person Constructor
+
+let elie = new Person("Elie");
+let colt = new Person("Colt")
+
+// since we used the new keyword, we have established 
+// a link between the object and the prototype property 
+// we can acces that using __ptoto__ 
+
+elie.__proto__ === Person.prototype; // true
+colt.__proto__ === Person.prototype; // true
