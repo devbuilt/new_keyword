@@ -74,3 +74,11 @@ colt.__proto__ === Person.prototype; // true
 // called constructor which points back to the function
 
 Person.prototype.constructor === Person; //true
+
+Person.prototype.isInstructor = true;
+
+elie.isInstructor; // true
+colt.isInstructor; // true
+
+// how were we able to access properties on the prototype??
+// __proto__!
