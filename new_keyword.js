@@ -65,7 +65,12 @@ let colt = new Person("Colt")
 
 // since we used the new keyword, we have established 
 // a link between the object and the prototype property 
-// we can acces that using __ptoto__ 
+// we can acces that using __proto__ 
 
 elie.__proto__ === Person.prototype; // true
 colt.__proto__ === Person.prototype; // true
+
+// The person.prototype object alos has a property
+// called constructor which points back to the function
+
+Person.prototype.constructor === Person; //true
