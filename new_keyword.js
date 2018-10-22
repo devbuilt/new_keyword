@@ -82,3 +82,29 @@ colt.isInstructor; // true
 
 // how were we able to access properties on the prototype??
 // __proto__!
+
+
+// code refactor
+
+function Person(name){
+    this.name = name;
+    this.sayHi = function(){
+        return "Hi " + this.name;
+    }
+}
+
+elie = new Person("Elie");
+elie.sayHi(); //Hi Elie
+
+// now this code works, but it is inefficient 
+//every time we make an object using the new keyword we have to redefine this function
+// but its the same for everyone! Let's put it on the prototype instead!
+function Person(){
+    this.name;
+}
+Person.prototype.sayHi = function(){
+    return "Hi " + this.name;
+}
+
+elie = new Person("Elie");
+elie.sayHi();// Hi Elie
